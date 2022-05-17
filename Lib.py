@@ -5,7 +5,7 @@ import logging
 
 
 logging.basicConfig(level=logging.INFO, filename="logging.log",
-                    filemode="a", format="%(asctime)s - %(message)s")
+                    filemode="w", format="%(asctime)s - %(message)s")
 
 
 @dataclass
@@ -36,5 +36,5 @@ class Inv():
         Returns relevant information."""
         print(
             f"Created \"{self.name}\" on {self.day}. Current quantity is {self.current_quantity}")
-        logging.info(
-            f"Created \"{self.name}\" on {self.day}. Current quantity is {self.current_quantity}")
+
+    logging.info(f"Created {self.name}")
